@@ -1,11 +1,14 @@
 import { useState } from "react";
 
-const CounterSizeGenerator =() => {
+const CounterSizeGenerator =(props) => {
     const [size, setSize] = useState(0);
+    const { onSizeChange } = props;
     
     const onChange = (event) =>{
         const inputValue = event.target.value;
-        setSize(inputValue);
+        const sizeNumber = inputValue=== ''? 0 :parseInt(inputValue)
+        setSize(sizeNumber);
+        onSizeChange(sizeNumber);
     };
     
     return<div>

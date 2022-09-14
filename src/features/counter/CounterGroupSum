@@ -1,0 +1,7 @@
+const CounterGroupSum = () => {
+    return <div>
+        <span>Sum: </span> 
+    </div>
+}
+
+export default CounterGroupSum
