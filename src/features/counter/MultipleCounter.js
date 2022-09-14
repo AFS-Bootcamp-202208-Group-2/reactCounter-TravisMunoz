@@ -21,7 +21,7 @@ const MultipleCounter =() => {
     },[size])
 
     return<><CounterSizeGenerator onSizeChange = {handleSizeChange} />
-    {sum}
+    <CounterGroupSum sum ={sum}/>
     <CounterGroup size = {size} updateSum = {updateSum}  />
     </>
 }
